@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+@font-face {
+    font-family: 'Martian Mono';
+    src: url('media/MartianMono-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 800;
+    font-style: normal;
+}
+
+body {
+    background-color: rgb(241, 255, 131);
+}
+
+p {
+    color: #00ab45;
+    font-family: 'Martian Mono', monospace;
+}
+
+h1 {
+    color: rgb(255, 0, 68);
+    font-family: 'Courier New', Courier, bold;
+}
+
+h2 {
+    font-family: 'Honk', cursive;
+    font-size: 45px;
+}
+
+
+.music-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.music-player button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+.rainbow_txt {
+    font-family: 'Courier New', Courier, bold; 
+    font-size: 16px;
+    line-height: 1.2;
+    white-space: pre; 
+    color: transparent; 
+    background: linear-gradient(120deg, red, orange, green, blue, indigo, violet);
+    background-clip: text;
+    -webkit-background-clip: text; 
+}
+
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  background-color: rgb(230, 0, 80);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.334);
+    
+}
+
+.music-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.cover-art {
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: #111 2px solid;
+
+}
+
+.music-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+
+
+.playlist ul {
+  list-style: ">";
+  padding: 0;
+  margin: 0;
+}
+
+.playlist li {
+  font-family: helvetica, sans-serif;
+  font-size: 18px;
+  color: #111;
+  margin: 5px 0;
+  text-align: left;
+  padding-left: 20px;
+}
+
+
+
+
