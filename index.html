@@ -1,17 +1,73 @@
 <!DOCTYPE html>
 <html><title>Xulub.com</title>
-<body>
-<center><h1>Xulub´s Page</h1></center>
-<center><p>Hosteado con github pages</p></center>
-<center>----- REPRODUCTOR DE MUSICA -----</center>
+<head>
+        <link rel="stylesheet" href="style.css">
+        <style>
+</style>
+</head>
+<center><body>
+<h1>Xulub´s Page</h1>
+<p>Hosteado con github pages</p>
 
-<center><audio controls autoplay>
-<source src="media\Let's Dance in the Dirt!.mp3" type="audio/mp3">
-Tu navegador no soporta la etiqueta de audio.
-</audio></center>
-</body>
-<center><pre>
+<div class="container">
+        <h2> REPRODUCTOR DE MÚSICA </h2>
+        <div class ="music-card">
+                <div class="music-info"> <!-- Links de los Cover Arts -->
+                        <img id="coverArt" src ="media/Let's Dance in the Dirt! Cover Art.jpg" class = "cover-art">
+                <div class="music-player">
+                        <audio id="myMusic" autoplay loop> <!-- Aquí van las todas las canciones y sus direcciones -->
+                                <source src="media/Let's Dance in the Dirt!.mp3" type="audio/mpeg">
+                                Tu navegador no soporta el elemento de audio.
+                        </audio>
+                        <!-- Controles del volumen de la música y de reproducción -->
+                        <button onclick="playAudio()">Play</button>
+                        <button onclick="pauseAudio()">Pause</button>
+                        <input type="range" min="0" max="0.45" step="0.01" onchange="setVolume(this.value)">
+                </div>
+                </div>
+                <div class="playlist">
+                        <ul>
+                                <li><button onclick="changeSong('media/Let\'s Dance in the Dirt!.mp3',
+                                                                'media/Let\'s Dance in the Dirt! Cover Art.jpg')"
+                                >Lest Dance in the Dirt! de Macabre plaza</button></li>
+                                <li><button onclick="changeSong('media/80808.mp3',
+                                                                'media/80808 Cover Art.jpg')"
+                                >80808 de Death Grips</button></li>
+                                <li><button onclick="changeSong('media/Big mess.mp3',
+                                                                'media/Big mess Cover Art.jpg')"
+                                >Big mess de DEVO</button></li>
+                        </ul>
+                </div>
+                <script>
+                        var audio = document.getElementById('myMusic');
+                        var coverArt = document.getElementById('coverArt');
 
+                        function playAudio() {
+                        audio.play();
+                        }
+
+                        function pauseAudio() {
+                        audio.pause();
+                        }
+
+                        function changeSong(track, cover) {
+                        audio.src = track;
+                        coverArt.src = cover;
+                        audio.play();
+
+                        }
+
+                        function setVolume(volume) {
+                        audio.volume = volume;
+                        }
+
+                                
+
+                </script>
+        </div>
+</div>
+
+<pre class="rainbow_txt">
 ______________________________/\\\\\\___________________/\\\________        
  _____________________________\////\\\__________________\/\\\________       
   ________________________________\/\\\__________________\/\\\________      
@@ -22,7 +78,11 @@ ______________________________/\\\\\\___________________/\\\________
        __/\\\/\///\\\_\//\\\\\\\\\___/\\\\\\\\\_\//\\\\\\\\\__\/\\\\\\\\\__ 
         _\///____\///___\/////////___\/////////___\/////////___\/////////___
 
-</pre></center>
-<img src="media\Let's Dance in the Dirt! Cover Art.jpg" alt="Lests Dance in The Dirt! de Macabre Plaza"
-</html>
+</pre>
 
+</body></center>
+        
+    <p>© 2025 Xulub.com</p>
+    <p>Creado por <a href="https://github.com/Xulub">Xulub</a></p>
+
+</html>
